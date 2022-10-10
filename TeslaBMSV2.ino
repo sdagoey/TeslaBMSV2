@@ -46,7 +46,7 @@ SerialConsole console;
 EEPROMSettings settings;
 
 /////Version Identifier/////////
-int firmver = 220820; //Year Month Day
+int firmver = 221009; //Year Month Day
 
 //Curent filter//
 float filterFrequency = 5.0 ;
@@ -241,7 +241,7 @@ void loadSettings()
   settings.logLevel = 2;
   settings.CAP = 100; //battery size in Ah
   settings.Pstrings = 1; // strings in parallel used to divide voltage of pack
-  settings.Scells = 12;//Cells in series
+  settings.Scells = 36;//Cells in series
   settings.StoreVsetpoint = 3.8; // V storage mode charge max
   settings.discurrentmax = 300; // max discharge current in 0.1A
   settings.DisTaper = 0.3f; //V offset to bring in discharge taper to Zero Amps at settings.DischVsetpoint
@@ -272,7 +272,7 @@ void loadSettings()
   settings.gaugehigh = 255; //full fuel gauge pwm
   settings.ESSmode = 0; //activate ESS mode
   settings.ncur = 1; //number of multiples to use for current measurement
-  settings.chargertype = 2; // 1 - Brusa NLG5xx 2 - Volt charger 0 -No Charger
+  settings.chargertype = Elcon; // 1 - Brusa NLG5xx 2 - Volt charger 0 -No Charger
   settings.chargerspd = 100; //ms per message
   settings.chargereff = 85; //% effiecency of charger
   settings.chargerACv = 240;// AC input voltage into Charger
